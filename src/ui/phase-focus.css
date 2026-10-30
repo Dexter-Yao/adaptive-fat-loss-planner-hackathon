@@ -1,0 +1,77 @@
+/* ABOUTME: C owns phase detail composition; semantic values come from DESIGN.md. */
+.phase-focus {
+  border-top: 1px solid var(--border);
+  margin-top: var(--space-sm);
+  padding-top: var(--space-lg);
+}
+
+.phase-focus-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+.phase-focus-heading h3 {
+  margin: var(--space-xs) 0 var(--space-sm);
+}
+
+.phase-focus-heading .meta {
+  margin: 0;
+}
+
+.phase-navigation {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.phase-focus > p {
+  margin: var(--space-sm) 0;
+  color: var(--muted-foreground);
+}
+
+.phase-guidance-content {
+  margin-top: var(--space-md);
+  display: grid;
+  gap: var(--space-md);
+}
+.phase-guidance-content h4 {
+  font-size: var(--type-label-font-size);
+  font-weight: var(--type-section-font-weight);
+  margin: 0 0 var(--space-xs);
+}
+.phase-guidance-content p,
+.phase-guidance-content ul {
+  margin: 0;
+  color: var(--muted-foreground);
+}
+.phase-guidance-content ul {
+  list-style: disc;
+  padding-left: var(--space-xl);
+}
+.phase-guidance-content li + li {
+  margin-top: var(--space-xs);
+}
+.phase-guidance-content .disclosure-trigger {
+  font-size: var(--type-label-font-size);
+}
+.phase-guidance-note,
+.phase-summary-compatibility small {
+  font-size: var(--type-caption-font-size);
+  color: var(--muted-foreground);
+}
+.phase-summary-compatibility {
+  margin-top: var(--space-sm);
+}
+.phase-summary-compatibility p {
+  margin-bottom: var(--space-xs);
+  color: var(--muted-foreground);
+}
+.phase-evidence + .phase-evidence {
+  margin-top: var(--space-md);
+}
+.phase-evidence blockquote {
+  margin: 0 0 var(--space-xs);
+  padding-left: var(--space-md);
+  border-left: 2px solid var(--border);
+}

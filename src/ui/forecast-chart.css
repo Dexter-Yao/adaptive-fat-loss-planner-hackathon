@@ -1,0 +1,409 @@
+/* ABOUTME: Chart geometry, compact comparison controls and the shared phase-axis layout. */
+.trend-panel {
+  padding: var(--space-xl);
+  margin-bottom: var(--space-lg);
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.chart-controls > [data-slot="field"] {
+  min-width: 160px;
+}
+
+.chart-wrap {
+  min-width: 0;
+  width: 100%;
+}
+
+.forecast-chart {
+  height: 300px;
+  width: 100%;
+  aspect-ratio: auto;
+}
+
+@media (max-width: 760px) {
+  .trend-panel {
+    padding: var(--space-lg);
+  }
+}
+
+@media (max-width: 760px) {
+  .chart-controls {
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
+}
+
+@media (max-width: 760px) {
+  .chart-controls > [data-slot="field"] {
+    min-width: 0;
+    flex: 1;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 760px) {
+  .chart-controls [data-slot="native-select"] {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 760px) {
+  .forecast-chart {
+    height: 260px;
+  }
+}
+
+.chart-controls > [data-slot="field"] {
+  width: auto;
+}
+
+.trend-panel .chart-controls {
+  margin-bottom: 0;
+}
+
+.phase-axis {
+  position: relative;
+  height: calc(var(--component-control-height) + var(--space-sm));
+  margin-top: var(--space-xs);
+}
+
+.phase-segment[data-slot="button"] {
+  position: absolute;
+  min-width: 0;
+  height: var(--component-control-height);
+  border-radius: 0;
+  padding: var(--space-sm) var(--space-xs) 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: var(--type-caption-font-size);
+  color: var(--muted-foreground);
+  overflow: clip;
+}
+
+.phase-segment-label {
+  position: sticky;
+  left: var(--space-sm);
+}
+
+.phase-segment-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: var(--space-xs);
+  height: var(--space-xs);
+  background: var(--border);
+}
+
+.phase-segment[aria-pressed="true"] {
+  color: var(--primary-text);
+  background: var(--accent);
+}
+
+.phase-segment[aria-pressed="true"] .phase-segment-line {
+  background: var(--chart-1);
+}
+
+.trend-panel:has(.journey-timeline) {
+  padding: var(--space-lg);
+  gap: var(--space-sm);
+}
+
+.trend-panel:has(.journey-timeline) .forecast-chart {
+  height: var(--component-journey-chart-height);
+}
+
+/* One scroll canvas contains both the plot and phase axis; the page width stays fixed. */
+.journey-chart,
+.journey-comparison {
+  min-width: 0;
+  max-width: 100%;
+}
+.journey-chart-scroll {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scrollbar-gutter: stable;
+}
+.journey-chart-scroll:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+.journey-chart-canvas {
+  width: 100%;
+}
+.journey-chart-canvas .forecast-chart {
+  height: calc(
+    var(--component-journey-chart-height) + var(--component-control-height)
+  );
+}
+/* Keep the same y scale readable while the shared date canvas scrolls. */
+.forecast-pinned-scale {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  height: calc(
+    var(--component-journey-chart-height) + var(--component-control-height)
+  );
+  margin-bottom: calc(
+    0px - var(--component-journey-chart-height) -
+      var(--component-control-height)
+  );
+  background: var(--background);
+  pointer-events: none;
+  font-size: var(--type-caption-font-size);
+  color: var(--muted-foreground);
+}
+.forecast-scale-ticks {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.forecast-scale-ticks > span {
+  position: absolute;
+  right: 8px;
+  transform: translateY(-50%);
+  line-height: 1;
+}
+.forecast-toolbar,
+.forecast-scroll-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+.forecast-toolbar {
+  margin-top: var(--space-sm);
+  flex-wrap: wrap;
+}
+.chart-zoom-label {
+  display: block;
+}
+.forecast-goal-label {
+  font-size: var(--type-caption-font-size);
+}
+.forecast-checkin-list {
+  max-height: var(--component-journey-chart-height);
+  overflow-y: auto;
+  padding: var(--space-md);
+  font-size: var(--type-label-font-size);
+}
+.forecast-checkin-list ol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-sm) var(--space-lg);
+}
+.forecast-checkin-list:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+.forecast-actions {
+  display: flex;
+  flex-shrink: 0;
+}
+.chart-status {
+  font-size: var(--type-caption-font-size);
+  color: var(--muted-foreground);
+}
+.forecast-scroll-actions {
+  justify-content: flex-end;
+}
+.forecast-scroll-actions .chart-status {
+  text-align: center;
+}
+.forecast-comparison-controls {
+  margin-block: var(--space-sm) var(--space-lg);
+}
+.forecast-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--space-xs);
+}
+.forecast-legend-item {
+  display: inline-flex;
+  align-items: center;
+}
+.forecast-legend-item > [aria-haspopup="dialog"] {
+  width: var(--component-control-height);
+  height: var(--component-control-height);
+}
+.forecast-legend .forecast-model-select {
+  min-width: 0;
+  height: var(--component-control-height);
+  padding-inline: var(--space-sm);
+  font-size: var(--type-caption-font-size);
+  font-weight: var(--type-label-font-weight);
+  border-radius: 0;
+  color: var(--muted-foreground);
+  background: transparent;
+  box-shadow: inset 0 calc(0px - var(--component-comparison-selection-width))
+    transparent;
+}
+.forecast-legend [aria-pressed="true"] {
+  color: var(--primary-text);
+  box-shadow: inset 0 calc(0px - var(--component-comparison-selection-width))
+    var(--chart-1);
+}
+.forecast-legend .forecast-model-select:disabled {
+  opacity: 1;
+}
+.forecast-model-count {
+  font-weight: normal;
+  color: var(--muted-foreground);
+}
+.forecast-legend-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+.forecast-default {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-left: auto;
+}
+.forecast-default-label {
+  font-size: var(--type-caption-font-size);
+  color: var(--muted-foreground);
+}
+.forecast-actual-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--type-caption-font-size);
+  color: var(--muted-foreground);
+}
+.forecast-pin[data-slot="button"] {
+  height: var(--component-control-height);
+  font-size: var(--type-caption-font-size);
+  color: var(--muted-foreground);
+  padding-inline: var(--space-sm);
+}
+.forecast-pin[aria-pressed="true"]:disabled {
+  opacity: 1;
+}
+.series-key {
+  display: inline-block;
+  position: relative;
+  width: var(--component-comparison-legend-key-width);
+  min-width: var(--component-comparison-legend-key-width);
+  height: 0;
+  border-top: var(--component-comparison-secondary-width) solid;
+}
+.series-mean {
+  border-color: var(--chart-1);
+  border-top-style: dashed;
+  border-top-width: var(--component-comparison-primary-width);
+}
+.series-hall {
+  border-color: var(--chart-1);
+}
+.series-thomas {
+  border-color: var(--chart-2);
+}
+.series-antonetti {
+  border-color: var(--chart-3);
+}
+.series-recorded {
+  border-color: var(--foreground);
+  border-top-width: var(--component-comparison-actual-width);
+}
+.series-recorded::after {
+  content: "";
+  position: absolute;
+  width: var(--space-xs);
+  height: var(--space-xs);
+  border-radius: 50%;
+  background: var(--foreground);
+  left: calc(50% - var(--space-xs) / 2);
+  top: calc(
+    0px - var(--space-xs) / 2 - var(--component-comparison-actual-width) / 2
+  );
+}
+.forecast-variation-caption {
+  margin-top: var(--space-xs);
+  font-size: var(--type-caption-font-size);
+  color: var(--muted-foreground);
+  display: flex;
+  gap: var(--space-xs);
+  align-items: center;
+}
+.forecast-variation-caption > span {
+  font-size: var(--type-section-font-size);
+}
+.forecast-option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding-block: var(--space-sm);
+  cursor: pointer;
+}
+.forecast-option [data-slot="checkbox"] {
+  margin-top: var(--space-xs);
+}
+.forecast-option small {
+  display: block;
+  color: var(--muted-foreground);
+  margin-top: var(--space-xs);
+}
+.forecast-tooltip-value {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+.forecast-tooltip-value > span {
+  color: var(--muted-foreground);
+}
+.forecast-tooltip-value > strong {
+  white-space: nowrap;
+}
+.checkpoint-tooltip {
+  display: block;
+  font-weight: normal;
+  color: var(--muted-foreground);
+}
+.forecast-help {
+  max-height: calc(100dvh - var(--space-xxl));
+  overflow-y: auto;
+}
+.forecast-help ul {
+  padding-left: var(--space-lg);
+  list-style: disc;
+}
+.forecast-help li {
+  margin-bottom: var(--space-md);
+}
+.forecast-help a {
+  color: var(--primary-text);
+  text-decoration: underline;
+}
+.chart-no-output {
+  display: grid;
+  place-content: center;
+  padding: var(--space-xl);
+  text-align: center;
+  color: var(--muted-foreground);
+  border: 1px dashed var(--border);
+}
+@media (max-width: 520px) {
+  .forecast-scroll-actions .chart-status {
+    font-size: var(--type-caption-font-size);
+  }
+}

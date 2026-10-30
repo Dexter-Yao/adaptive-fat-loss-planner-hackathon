@@ -1,0 +1,6 @@
+node_modules/
+.next/
+.runtime/
+src/app/design-tokens.css
+tests/fixtures/*.json
+pnpm-lock.yaml

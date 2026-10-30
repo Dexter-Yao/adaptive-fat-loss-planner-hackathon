@@ -1,0 +1,8 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "buildCommand": "pnpm design:tokens && pnpm exec next build --webpack",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "regions": ["arn1"],
+  "fluid": true
+}

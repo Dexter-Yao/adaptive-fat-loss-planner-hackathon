@@ -1,0 +1,1111 @@
+{
+  "version": "adaptive-journeys-2026-10-29-v2",
+  "status": "cases_approved",
+  "dataClass": "fictional",
+  "inputLanguage": "en",
+  "purposeZh": "Dexter 已在 2026-10-29 认可六个案例。评估对象统一为完整初始或修订减脂方案，使用四维 Nemotron 3 Ultra 二分评审；评审器尚未人工校准，不作为临床有效性结论。",
+  "provenanceZh": "六个人物、全部生理资料、目标、日期、体重/体脂读数和反馈均为手工编写的虚构数据。社区讨论只提供需求与障碍的启发，不是对原帖人物的重建；读数不是模型输出或减脂效果证据。",
+  "scopeZh": "只收集体重、体脂、测量日期/方式和可选情境备注；不包含每日餐次、摄入热量、食物照片、运动消耗记录或每日任务打卡。",
+  "timeZh": "统一使用 2026-06-01 的历史虚构基线，后续测量均在 2026-10-29 之前；目标日期可以在未来。每次评估只能看见当时及以前的输入。",
+  "commonReviewQuestionsZh": [
+    "四个维度的职责是否清楚，能够定位不同失败原因？",
+    "评审引用的用户条件、整段方案和修订反馈是否准确？",
+    "哪些 pass/fail 或理由需要人工纠正？科学性尚不能因通用人工评阅而称为专家校准。"
+  ],
+  "sources": {
+    "S01": "https://www.reddit.com/r/loseit/comments/1u2oi7j/day_1_starting_my_weight_loss_journey_posting_for/",
+    "S02": "https://www.reddit.com/r/loseit/comments/1u0fw7b/today_is_day_1_wedding_is_166_days_out/",
+    "S03": "https://v2ex.com/t/794568",
+    "S04": "https://www.reddit.com/r/loseit/comments/1gi2wxl/anyone_else_find_calorie_tracking_exhausting_and/",
+    "S05": "https://www.reddit.com/r/loseit/comments/1qi5hgy/how_do_people_find_time_to_work_out_with_full/",
+    "S06": "https://www.reddit.com/r/loseit/comments/1rxus91/will_i_always_regain_on_vacation/",
+    "S07": "https://www.reddit.com/r/loseit/comments/1eatax5",
+    "S08": "https://www.reddit.com/r/loseit/comments/mw4c76"
+  },
+  "cases": [
+    {
+      "id": "J01",
+      "titleZh": "低投入重新开始，没有硬截止",
+      "sourceIds": [
+        "S01",
+        "S05"
+      ],
+      "cycleZh": "希望约 4–6 个月减重；没有硬截止，完整预计周期由计算器给出，先连续复盘 6 周。",
+      "lifeZh": "曾经练 CrossFit，半年前已停。当前办公室久坐，无正式训练。蛋奶素食，希望恢复稳定节奏和精力。",
+      "effortZh": "未来正式训练预算为 0；保留日常走动。愿意每周花约 20 分钟审视饮食结构和可选餐，每周称重一次。",
+      "initialInput": {
+        "profile": {
+          "ageYears": 31,
+          "sex": "male",
+          "heightCm": 176,
+          "weightKg": 94,
+          "startDate": "2026-06-01",
+          "bodyFat": null,
+          "activity": {
+            "work": "very_light",
+            "leisure": "very_light",
+            "routines": [],
+            "source": "questionnaire",
+            "migratedPal": null
+          },
+          "eligibility": "standard",
+          "timezone": "Asia/Bangkok"
+        },
+        "goal": {
+          "id": "J01-goal",
+          "kind": "weight",
+          "value": 88,
+          "requestedDate": null
+        },
+        "preferences": {
+          "context": "I stopped CrossFit six months ago. In the last two weeks I have mostly sat at work with no dedicated training. During this plan I do not want scheduled workouts. I can spend a short weekly planning session choosing manageable meals and weigh myself weekly. I want a gradual approach, preferably over several months, with no hard deadline. I normally weigh after waking and using the bathroom on the same home scale.",
+          "foodPreferences": "Lacto-ovo vegetarian. I eat eggs, dairy, beans, tofu, rice and vegetables. I want ordinary meals, not supplements or an elaborate new cooking routine.",
+          "cooking": "mixed",
+          "availableTrainingMinutes": 0,
+          "missingMealMultiplier": 1.2,
+          "mealSchedules": [
+            {
+              "effectiveFrom": "2026-06-01",
+              "slots": [
+                {
+                  "id": "breakfast",
+                  "label": "Breakfast",
+                  "share": 0.3333333333333333
+                },
+                {
+                  "id": "lunch",
+                  "label": "Lunch",
+                  "share": 0.3333333333333333
+                },
+                {
+                  "id": "dinner",
+                  "label": "Dinner",
+                  "share": 0.3333333333333333
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "initialFeedback": {
+        "priorities": [
+          "fewer_actions",
+          "less_time"
+        ],
+        "notes": "I prefer just two weekly priorities and a measurement check-in. Keep the vegetarian choices and no scheduled workouts; focus on a routine I can sustain.",
+        "availableTrainingMinutes": 0,
+        "requestedGoalDate": null
+      },
+      "feedbackZh": "初稿审阅时提出：每周只保留两项重点与测量检查点，不新增训练或复杂备餐。",
+      "checkIns": [
+        {
+          "measurement": {
+            "date": "2026-06-08",
+            "weightKg": 93.6,
+            "bodyFat": null,
+            "notes": "The simpler structure is manageable. Please keep it straightforward."
+          },
+          "detailZh": "执行负担可接受。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-15",
+            "weightKg": 93.4,
+            "bodyFat": null,
+            "notes": "This week was busy, but the plan still fits."
+          },
+          "detailZh": "工作忙，仍认为方案可行。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-22",
+            "weightKg": 92.9,
+            "bodyFat": null,
+            "notes": "My energy feels fine. I am not asking for harder targets."
+          },
+          "detailZh": "精力尚可，未要求加码。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-29",
+            "weightKg": 92.8,
+            "bodyFat": null,
+            "notes": "This reading changed little. Should I worry, or keep going?"
+          },
+          "detailZh": "一次下降较少，询问是否需要调整。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-06",
+            "weightKg": 92.4,
+            "bodyFat": null,
+            "notes": "The routine is still workable; no new exercise commitment."
+          },
+          "detailZh": "仍愿维持低投入。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-13",
+            "weightKg": 92.1,
+            "bodyFat": null,
+            "notes": "I would like to continue at this level of effort."
+          },
+          "detailZh": "希望维持当前投入，不因阶段结束自动加码。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        }
+      ],
+      "focusZh": "检验完整且低负担的方案、正常趋势下保持支持，以及不用硬截止也能解释周期。",
+      "criteria": [
+        "real_world_feasibility",
+        "agency_feedback",
+        "behavior_adaptation"
+      ]
+    },
+    {
+      "id": "J02",
+      "titleZh": "重要活动在前，最终目标可以延后",
+      "sourceIds": [
+        "S02"
+      ],
+      "cycleZh": "目标日期为基线后 20 周（重要活动）；若计算或后续趋势不支持，愿意讨论活动当天阶段成果及更晚的最终达标日。",
+      "lifeZh": "平时工作久坐，当前每周两次步行、一次力量训练。希望活动时状态更好，同时不想靠极端限制赶日期。",
+      "effortZh": "愿意维持每周 90 分钟正式活动，上限不是必须加满的配额；不愿额外增加训练时长或牺牲正常聚餐。",
+      "initialInput": {
+        "profile": {
+          "ageYears": 34,
+          "sex": "female",
+          "heightCm": 165,
+          "weightKg": 83,
+          "startDate": "2026-06-01",
+          "bodyFat": null,
+          "activity": {
+            "work": "very_light",
+            "leisure": "active",
+            "routines": [
+              {
+                "kind": "walking",
+                "minutes": 30,
+                "timesPerWeek": 2
+              },
+              {
+                "kind": "strength",
+                "minutes": 30,
+                "timesPerWeek": 1
+              }
+            ],
+            "source": "questionnaire",
+            "migratedPal": null
+          },
+          "eligibility": "standard",
+          "timezone": "Asia/Bangkok"
+        },
+        "goal": {
+          "id": "J02-goal",
+          "kind": "weight",
+          "value": 75,
+          "requestedDate": "2026-10-19"
+        },
+        "preferences": {
+          "context": "There is an important event twenty weeks after my start date. I would like to reach my goal by then, but I can discuss finishing later rather than using an extreme plan. I currently walk twice weekly and do one strength session, each about half an hour. I am willing to maintain that routine, not increase it. I want to retain occasional social meals. I use the same home scale on Monday mornings.",
+          "foodPreferences": "I enjoy ordinary home-cooked meals and shared dinners. No dietary exclusions.",
+          "cooking": "mixed",
+          "availableTrainingMinutes": 90,
+          "missingMealMultiplier": 1.2,
+          "mealSchedules": [
+            {
+              "effectiveFrom": "2026-06-01",
+              "slots": [
+                {
+                  "id": "breakfast",
+                  "label": "Breakfast",
+                  "share": 0.3333333333333333
+                },
+                {
+                  "id": "lunch",
+                  "label": "Lunch",
+                  "share": 0.3333333333333333
+                },
+                {
+                  "id": "dinner",
+                  "label": "Dinner",
+                  "share": 0.3333333333333333
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "initialFeedback": {
+        "priorities": [
+          "food_flexibility",
+          "other"
+        ],
+        "notes": "Please show how the event milestone relates to the full goal. If the calculator does not support the date, explain the options. Do not add more exercise to force the deadline.",
+        "availableTrainingMinutes": 90,
+        "requestedGoalDate": null
+      },
+      "feedbackZh": "审阅时要求：区分活动里程碑与完整目标；若不能按日期达标，提供可选择的时间安排，不自动加训。",
+      "checkIns": [
+        {
+          "measurement": {
+            "date": "2026-06-08",
+            "weightKg": 82.6,
+            "bodyFat": null,
+            "notes": "The plan fits my usual week."
+          },
+          "detailZh": "方案可行。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-15",
+            "weightKg": 82.4,
+            "bodyFat": null,
+            "notes": "A social dinner was enjoyable; I want room for this in my life."
+          },
+          "detailZh": "希望保留社交灵活性，不报饮食热量。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-22",
+            "weightKg": 82,
+            "bodyFat": null,
+            "notes": "I am maintaining the level of activity I agreed to."
+          },
+          "detailZh": "愿维持已确认投入；不由此推定能量消耗。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-29",
+            "weightKg": 81.8,
+            "bodyFat": null,
+            "notes": "I am wondering about progress toward the event, not asking for harsher targets."
+          },
+          "detailZh": "关心活动日期，未要求更严格方案。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-06",
+            "weightKg": 81.4,
+            "bodyFat": null,
+            "notes": "I still cannot add more training time."
+          },
+          "detailZh": "训练上限不变。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-13",
+            "weightKg": 81.2,
+            "bodyFat": null,
+            "notes": "Could you review whether my event expectation still fits? I am open to finishing the full goal later."
+          },
+          "detailZh": "明确请求按当前预测复核时间选择。",
+          "reviewMode": "manual",
+          "feedback": null,
+          "proposalDecision": "none"
+        }
+      ],
+      "focusZh": "检验多月规划、日期与目标分离、诚实可行性及用户选择权；没有预设计算器必定支持或不支持该日期。",
+      "criteria": [
+        "real_world_feasibility",
+        "science_safety",
+        "agency_feedback",
+        "behavior_adaptation"
+      ]
+    },
+    {
+      "id": "J03",
+      "titleZh": "外食与家庭共餐，不做食物记账",
+      "sourceIds": [
+        "S03",
+        "S04"
+      ],
+      "cycleZh": "16 周目标，前 6 周连续测量；情境变化时优先讨论降低复杂度，而不是新增记录任务。",
+      "lifeZh": "工作日多在食堂或外卖解决，晚餐与家人共享。拒绝称食材、记录每餐热量或大量周末备餐。",
+      "effortZh": "初始愿意每周两次各 30 分钟步行；饮食只接受少量周级原则与常见选择，后续因加班愿意的正式活动降至每周 30 分钟。",
+      "initialInput": {
+        "profile": {
+          "ageYears": 45,
+          "sex": "female",
+          "heightCm": 160,
+          "weightKg": 82,
+          "startDate": "2026-06-01",
+          "bodyFat": null,
+          "activity": {
+            "work": "very_light",
+            "leisure": "moderate",
+            "routines": [
+              {
+                "kind": "walking",
+                "minutes": 30,
+                "timesPerWeek": 2
+              }
+            ],
+            "source": "questionnaire",
+            "migratedPal": null
+          },
+          "eligibility": "standard",
+          "timezone": "Asia/Bangkok"
+        },
+        "goal": {
+          "id": "J03-goal",
+          "kind": "weight",
+          "value": 76,
+          "requestedDate": "2026-09-21"
+        },
+        "preferences": {
+          "context": "I work at a desk. Weekday lunches come from a canteen or takeaway, and dinner is shared with my family. I do not want to weigh ingredients, photograph meals, record calories or spend the weekend meal-prepping. I can review a few weekly principles and use familiar food choices. I currently take two half-hour walks weekly and am willing to maintain them. I weigh on the same scale on Monday mornings.",
+          "foodPreferences": "The canteen and nearby takeaway offer rice, noodles, vegetable dishes, eggs, tofu and meat. Keep ordinary family dinners and normal staple foods.",
+          "cooking": "mostly_out",
+          "availableTrainingMinutes": 60,
+          "missingMealMultiplier": 1.2,
+          "mealSchedules": [
+            {
+              "effectiveFrom": "2026-06-01",
+              "slots": [
+                {
+                  "id": "breakfast",
+                  "label": "Breakfast",
+                  "share": 0.3333333333333333
+                },
+                {
+                  "id": "lunch",
+                  "label": "Lunch",
+                  "share": 0.3333333333333333
+                },
+                {
+                  "id": "dinner",
+                  "label": "Dinner",
+                  "share": 0.3333333333333333
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "initialFeedback": {
+        "priorities": [
+          "food_flexibility",
+          "fewer_actions"
+        ],
+        "notes": "I prefer a small set of adaptable weekly principles, not a daily menu or meal tracking. Keep family dinners and give options that work with my familiar canteen or takeaway.",
+        "availableTrainingMinutes": 60,
+        "requestedGoalDate": null
+      },
+      "feedbackZh": "要求少量可调整的周级原则，保留家庭晚餐与普通主食；不接受每日菜单或新增饮食打卡。",
+      "checkIns": [
+        {
+          "measurement": {
+            "date": "2026-06-08",
+            "weightKg": 81.7,
+            "bodyFat": null,
+            "notes": "The plan is easier when I can share dinner with my family."
+          },
+          "detailZh": "共餐可保留。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-15",
+            "weightKg": 81.5,
+            "bodyFat": null,
+            "notes": "I am not logging meals; the weekly structure feels manageable."
+          },
+          "detailZh": "未记录食物，不等于已知摄入。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-22",
+            "weightKg": 81.6,
+            "bodyFat": null,
+            "notes": "Busy week. Please do not add more tracking work because of this reading."
+          },
+          "detailZh": "一次小幅回升，仍不愿增加记录负担。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-29",
+            "weightKg": 81,
+            "bodyFat": null,
+            "notes": "I can continue the simple food structure."
+          },
+          "detailZh": "仍愿保留现有饮食结构。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-02",
+            "weightKg": null,
+            "bodyFat": null,
+            "notes": "Overtime will occupy four evenings a week. Going forward I am willing to give only thirty minutes a week to formal activity. I want help simplifying the plan, with no extra cooking or meal logging."
+          },
+          "detailZh": "只有情境备注：加班增加，明确请求人工触发教练审阅；没有新体重或饮食/运动记录。",
+          "reviewMode": "manual",
+          "feedback": {
+            "priorities": [
+              "less_time",
+              "fewer_actions"
+            ],
+            "notes": "For the coming weeks, please work within thirty minutes of formal activity weekly and keep family dinners. Do not compensate with a stricter food routine.",
+            "availableTrainingMinutes": 30,
+            "requestedGoalDate": null
+          },
+          "proposalDecision": "review_only"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-06",
+            "weightKg": 80.9,
+            "bodyFat": null,
+            "notes": "I want to review the proposed simpler plan before replacing the current one."
+          },
+          "detailZh": "审阅替代方案，尚未接受。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-13",
+            "weightKg": 80.5,
+            "bodyFat": null,
+            "notes": "The lower-burden approach sounds workable; I will decide after seeing the proposal and calculation."
+          },
+          "detailZh": "仅在看过实际提案与计算后才能模拟明确接受。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        }
+      ],
+      "focusZh": "检验备注不伪造数值、显式审阅入口、现实障碍下有意义的修订和原方案持续有效。",
+      "criteria": [
+        "real_world_feasibility",
+        "agency_feedback",
+        "science_safety"
+      ]
+    },
+    {
+      "id": "J04",
+      "titleZh": "旅行后读数上涨，先判断如何恢复",
+      "sourceIds": [
+        "S06"
+      ],
+      "cycleZh": "16 周目标；连续 6 周加一次中间复测，包含旅行后不同时间测量及恢复常规测量。",
+      "lifeZh": "门店工作，白天站立走动较多；重视与家人旅行和聚餐。担心一次偏离就失去全部进展，但不想惩罚性节食或加训。",
+      "effortZh": "愿意维持每周两次 30 分钟步行；旅行结束后恢复原安排，不增加正式活动时间。",
+      "initialInput": {
+        "profile": {
+          "ageYears": 38,
+          "sex": "male",
+          "heightCm": 173,
+          "weightKg": 83,
+          "startDate": "2026-06-01",
+          "bodyFat": null,
+          "activity": {
+            "work": "moderate",
+            "leisure": "moderate",
+            "routines": [
+              {
+                "kind": "walking",
+                "minutes": 30,
+                "timesPerWeek": 2
+              }
+            ],
+            "source": "questionnaire",
+            "migratedPal": null
+          },
+          "eligibility": "standard",
+          "timezone": "Asia/Bangkok"
+        },
+        "goal": {
+          "id": "J04-goal",
+          "kind": "weight",
+          "value": 77,
+          "requestedDate": "2026-09-21"
+        },
+        "preferences": {
+          "context": "I supervise a retail store and am on my feet most of the working day. Outside work I take two half-hour walks weekly. I am willing to keep that amount of formal activity; my work movement is not an extra training commitment. A family trip will occur during the plan, and shared meals matter to me. I want to return to a routine without punishment restriction after a disruption. My usual reading is after waking and using the bathroom on the same home scale.",
+          "foodPreferences": "Mixed ordinary meals. Keep room for family restaurants and social occasions. No dietary exclusions.",
+          "cooking": "mixed",
+          "availableTrainingMinutes": 60,
+          "missingMealMultiplier": 1.2,
+          "mealSchedules": [
+            {
+              "effectiveFrom": "2026-06-01",
+              "slots": [
+                {
+                  "id": "breakfast",
+                  "label": "Breakfast",
+                  "share": 0.3333333333333333
+                },
+                {
+                  "id": "lunch",
+                  "label": "Lunch",
+                  "share": 0.3333333333333333
+                },
+                {
+                  "id": "dinner",
+                  "label": "Dinner",
+                  "share": 0.3333333333333333
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "initialFeedback": {
+        "priorities": [
+          "food_flexibility",
+          "other"
+        ],
+        "notes": "Please include a travel-and-return strategy within the overall plan, without fasting or extra workouts to repay a social meal.",
+        "availableTrainingMinutes": 60,
+        "requestedGoalDate": null
+      },
+      "feedbackZh": "初次审阅就要求旅行与回归策略，不通过补偿性限制“还债”。",
+      "checkIns": [
+        {
+          "measurement": {
+            "date": "2026-06-08",
+            "weightKg": 82.6,
+            "bodyFat": null,
+            "notes": "The plan feels manageable."
+          },
+          "detailZh": "常规晨间测量。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-15",
+            "weightKg": 82.2,
+            "bodyFat": null,
+            "notes": "I can maintain my current commitments."
+          },
+          "detailZh": "常规晨间测量。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-22",
+            "weightKg": 81.9,
+            "bodyFat": null,
+            "notes": "The family trip is next week."
+          },
+          "detailZh": "提出即将发生的旅行。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-29",
+            "weightKg": 83.8,
+            "bodyFat": null,
+            "notes": "I returned from the trip yesterday. This reading is after dinner, unlike my usual morning time. I am worried I undid everything. I want help returning to the routine, not a punishment plan."
+          },
+          "detailZh": "旅行后饭后称重，担心反弹；此时不可看到后续复测。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-02",
+            "weightKg": 82.6,
+            "bodyFat": null,
+            "notes": "This is back on the same home scale after waking and using the bathroom."
+          },
+          "detailZh": "三天后恢复可比较的晨间测量。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-06",
+            "weightKg": 82,
+            "bodyFat": null,
+            "notes": "The routine is manageable again."
+          },
+          "detailZh": "回归常规测量与生活节奏。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-13",
+            "weightKg": 81.7,
+            "bodyFat": null,
+            "notes": "I want to keep the ordinary plan and retain future family trips."
+          },
+          "detailZh": "希望继续原计划并保留社交生活。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        }
+      ],
+      "focusZh": "检验复测、恢复支持与不确定性；不能在旅行后那次评估里偷看后来下降的数据来断言原因。",
+      "criteria": [
+        "science_safety",
+        "behavior_adaptation",
+        "agency_feedback"
+      ]
+    },
+    {
+      "id": "J05",
+      "titleZh": "连续落后且负担上升，讨论替代方案",
+      "sourceIds": [
+        "S07",
+        "S05"
+      ],
+      "cycleZh": "最初 16 周目标；连续 8 周。后续明确愿意把目标日期延长 8 周，先审阅比较再接受。",
+      "lifeZh": "办公室工作，原来规律跑步。加班增加后无法维持原投入，饥饿和计划负担让人担心能否持续。",
+      "effortZh": "初始愿意每周 90 分钟正式活动；后续明确降至 30 分钟，愿延长周期，不愿进一步压缩正常三餐。",
+      "initialInput": {
+        "profile": {
+          "ageYears": 42,
+          "sex": "male",
+          "heightCm": 178,
+          "weightKg": 98,
+          "startDate": "2026-06-01",
+          "bodyFat": null,
+          "activity": {
+            "work": "very_light",
+            "leisure": "active",
+            "routines": [
+              {
+                "kind": "running",
+                "minutes": 30,
+                "timesPerWeek": 3
+              }
+            ],
+            "source": "questionnaire",
+            "migratedPal": null
+          },
+          "eligibility": "standard",
+          "timezone": "Asia/Bangkok"
+        },
+        "goal": {
+          "id": "J05-goal",
+          "kind": "weight",
+          "value": 90,
+          "requestedDate": "2026-09-21"
+        },
+        "preferences": {
+          "context": "I work at a desk and currently run for half an hour three times a week. I am initially willing to maintain ninety minutes of formal activity weekly. I want to lose weight over about four months but may reconsider the timeline if work conditions change. Keep a normal meal structure and some shared dinners. I weigh on Monday mornings on the same scale.",
+          "foodPreferences": "Ordinary home and restaurant meals. No exclusions. I prefer flexibility rather than a rigid menu.",
+          "cooking": "mixed",
+          "availableTrainingMinutes": 90,
+          "missingMealMultiplier": 1.2,
+          "mealSchedules": [
+            {
+              "effectiveFrom": "2026-06-01",
+              "slots": [
+                {
+                  "id": "breakfast",
+                  "label": "Breakfast",
+                  "share": 0.3333333333333333
+                },
+                {
+                  "id": "lunch",
+                  "label": "Lunch",
+                  "share": 0.3333333333333333
+                },
+                {
+                  "id": "dinner",
+                  "label": "Dinner",
+                  "share": 0.3333333333333333
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "initialFeedback": {
+        "priorities": [
+          "food_flexibility",
+          "other"
+        ],
+        "notes": "Please keep a normal meal structure and do not assume my current training time can increase. Include how we will review the plan if work becomes busier.",
+        "availableTrainingMinutes": 90,
+        "requestedGoalDate": null
+      },
+      "feedbackZh": "要求正常餐食结构与复盘条件，不把现有训练上限当成后续必须加码的起点。",
+      "checkIns": [
+        {
+          "measurement": {
+            "date": "2026-06-08",
+            "weightKg": 97.4,
+            "bodyFat": null,
+            "notes": "I can manage the current plan."
+          },
+          "detailZh": "初期可执行。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-15",
+            "weightKg": 97,
+            "bodyFat": null,
+            "notes": "The routine still fits."
+          },
+          "detailZh": "仍可执行。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-22",
+            "weightKg": 96.7,
+            "bodyFat": null,
+            "notes": "Work has become much busier; keeping the old training schedule is getting difficult."
+          },
+          "detailZh": "出现执行条件变化，未提供实际能量消耗。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-29",
+            "weightKg": 96.9,
+            "bodyFat": null,
+            "notes": "I am hungry in the afternoons and the plan feels burdensome. I do not want a harsher routine."
+          },
+          "detailZh": "负担和饥饿增加。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-06",
+            "weightKg": 96.8,
+            "bodyFat": null,
+            "notes": "The same difficulties remain. I want support rather than being told to try harder."
+          },
+          "detailZh": "困难持续，不能重复泛泛鼓励。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-13",
+            "weightKg": 96.9,
+            "bodyFat": null,
+            "notes": "Going forward I am willing to do only thirty minutes of formal activity weekly. I do not want smaller regular meals. I am open to a later goal date but want to compare options before changing anything."
+          },
+          "detailZh": "明确请求复核投入和周期，拒绝未经比较就替换方案。",
+          "reviewMode": "manual",
+          "feedback": {
+            "priorities": [
+              "less_time",
+              "later_goal_date",
+              "food_flexibility"
+            ],
+            "notes": "Please compare a lower-burden option with the current plan. I am not accepting a change yet.",
+            "availableTrainingMinutes": 30,
+            "requestedGoalDate": null
+          },
+          "proposalDecision": "decline_until_reviewed"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-20",
+            "weightKg": 96.8,
+            "bodyFat": null,
+            "notes": "I am willing to extend the goal date by eight weeks, keeping the lower activity commitment. Please prepare an option for me to review."
+          },
+          "detailZh": "明确请求延期 8 周的可审阅替代方案。",
+          "reviewMode": "manual",
+          "feedback": {
+            "priorities": [
+              "less_time",
+              "later_goal_date"
+            ],
+            "notes": "I am willing to target the same weight eight weeks later, within thirty minutes of formal activity weekly. Show the recalculated proposal before acceptance.",
+            "availableTrainingMinutes": 30,
+            "requestedGoalDate": "2026-11-16"
+          },
+          "proposalDecision": "review_only"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-27",
+            "weightKg": 96.9,
+            "bodyFat": null,
+            "notes": "If the reviewed proposal respects these conditions and passes the calculator checks, I can explicitly accept it. Do not treat this message as automatic acceptance."
+          },
+          "detailZh": "只有经过实际审阅与服务端复核后，评估脚本才可模拟用户明确接受。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        }
+      ],
+      "focusZh": "检验持续偏离与负担的联合作用、目标取舍、拒绝/待审状态、明确接受和历史保留，不预写模型应给出的新数值。",
+      "criteria": [
+        "science_safety",
+        "agency_feedback",
+        "behavior_adaptation"
+      ]
+    },
+    {
+      "id": "J06",
+      "titleZh": "体脂为主目标，测量方式改变",
+      "sourceIds": [
+        "S08"
+      ],
+      "cycleZh": "24 周目标；前 8 周连续测量，包含体脂单独输入、一次 DXA 与家用 BIA 的方法差异。",
+      "lifeZh": "更在意体脂和体形而非每周秤重下降。当前每周两次力量训练，想维持这个投入。",
+      "effortZh": "愿意维持每周 60 分钟力量训练；不愿为了体重曲线更好看而追加有氧或收紧饮食。",
+      "initialInput": {
+        "profile": {
+          "ageYears": 37,
+          "sex": "female",
+          "heightCm": 166,
+          "weightKg": 75,
+          "startDate": "2026-06-01",
+          "bodyFat": {
+            "percent": 34,
+            "method": "bia"
+          },
+          "activity": {
+            "work": "very_light",
+            "leisure": "moderate",
+            "routines": [
+              {
+                "kind": "strength",
+                "minutes": 30,
+                "timesPerWeek": 2
+              }
+            ],
+            "source": "questionnaire",
+            "migratedPal": null
+          },
+          "eligibility": "standard",
+          "timezone": "Asia/Bangkok"
+        },
+        "goal": {
+          "id": "J06-goal",
+          "kind": "body_fat",
+          "value": 30,
+          "requestedDate": "2026-11-16"
+        },
+        "preferences": {
+          "context": "My primary goal is body-fat percentage, not a fixed lower scale weight. I currently do two half-hour strength sessions weekly and am willing to maintain them, not add cardio just to move the scale. My baseline body-fat reading is from a home BIA scale, normally used on Monday mornings. I want a sustainable plan that explains what the measurements and model can and cannot show.",
+          "foodPreferences": "Ordinary mixed meals. No exclusions or special diet.",
+          "cooking": "mixed",
+          "availableTrainingMinutes": 60,
+          "missingMealMultiplier": 1.2,
+          "mealSchedules": [
+            {
+              "effectiveFrom": "2026-06-01",
+              "slots": [
+                {
+                  "id": "breakfast",
+                  "label": "Breakfast",
+                  "share": 0.3333333333333333
+                },
+                {
+                  "id": "lunch",
+                  "label": "Lunch",
+                  "share": 0.3333333333333333
+                },
+                {
+                  "id": "dinner",
+                  "label": "Dinner",
+                  "share": 0.3333333333333333
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "initialFeedback": {
+        "priorities": [
+          "other",
+          "different_activity"
+        ],
+        "notes": "Please organize the plan around the body-fat goal and retain my existing strength routine. Explain measurement uncertainty without claiming that unchanged weight proves muscle gain.",
+        "availableTrainingMinutes": 60,
+        "requestedGoalDate": null
+      },
+      "feedbackZh": "以体脂目标组织方案；维持现有力量训练，不把体重下降当唯一成功标准。",
+      "checkIns": [
+        {
+          "measurement": {
+            "date": "2026-06-08",
+            "weightKg": 74.9,
+            "bodyFat": {
+              "percent": 33.9,
+              "method": "bia"
+            },
+            "notes": "Same home BIA scale and morning conditions."
+          },
+          "detailZh": "同一 BIA 和晨间条件。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-15",
+            "weightKg": 74.8,
+            "bodyFat": {
+              "percent": 33.8,
+              "method": "bia"
+            },
+            "notes": "I feel a little stronger; that is not a measurement of muscle gained."
+          },
+          "detailZh": "力量感觉改善，不是肌肉量证据。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-22",
+            "weightKg": 74.9,
+            "bodyFat": {
+              "percent": 33.7,
+              "method": "bia"
+            },
+            "notes": "Scale weight changed little. Is the plan still sensible for my body-fat goal?"
+          },
+          "detailZh": "体重小幅波动，询问与体脂目标的关系。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-06-29",
+            "weightKg": null,
+            "bodyFat": {
+              "percent": 31.1,
+              "method": "dxa"
+            },
+            "notes": "This body-fat reading is from a DXA appointment, not my usual BIA scale. I have no new weight reading. Does this mean I lost fat much faster?"
+          },
+          "detailZh": "体脂单独输入，方法改为 DXA；没有新体重。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-06",
+            "weightKg": 74.8,
+            "bodyFat": {
+              "percent": 33.6,
+              "method": "bia"
+            },
+            "notes": "Back to the original home BIA scale under the usual conditions."
+          },
+          "detailZh": "回到原 BIA 与原条件。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-13",
+            "weightKg": 74.7,
+            "bodyFat": {
+              "percent": 33.5,
+              "method": "bia"
+            },
+            "notes": "I want to maintain the agreed training commitment."
+          },
+          "detailZh": "训练投入不变。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-20",
+            "weightKg": 74.6,
+            "bodyFat": null,
+            "notes": "Weight only today; I did not measure body fat."
+          },
+          "detailZh": "只有体重，不补造体脂读数。",
+          "reviewMode": "if_eligible",
+          "feedback": null,
+          "proposalDecision": "none"
+        },
+        {
+          "measurement": {
+            "date": "2026-07-27",
+            "weightKg": 74.5,
+            "bodyFat": {
+              "percent": 33.3,
+              "method": "bia"
+            },
+            "notes": "Same home BIA method. Please review the trend without promising exact tissue changes."
+          },
+          "detailZh": "按同方法复盘；不保证组织变化。",
+          "reviewMode": "manual",
+          "feedback": null,
+          "proposalDecision": "none"
+        }
+      ],
+      "focusZh": "检验体脂目标、两类测量独立性、跨方法可比性、模型能力边界及不自动加训。",
+      "criteria": [
+        "science_safety",
+        "agency_feedback",
+        "behavior_adaptation"
+      ]
+    }
+  ]
+}

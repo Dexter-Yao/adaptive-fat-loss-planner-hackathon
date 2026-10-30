@@ -1,0 +1,198 @@
+{
+  "recordedAt": "2026-10-30",
+  "dataClass": "synthetic",
+  "scope": "Historical matched-operation replay and offline judgments. This is not a sequential user-journey benchmark or a new run of the deployed application.",
+  "dataset": {
+    "source": "src/evaluation/journey-cases.json",
+    "fictionalJourneys": 6,
+    "datedCheckIns": 42,
+    "classification": "Exploration/regression, not a held-out benchmark or 42 participants."
+  },
+  "modelRouting": [
+    {
+      "stage": "interpret",
+      "model": "nvidia/Nemotron-3_5-Lightning",
+      "thinking": false,
+      "maxTokens": 2048,
+      "executionStatus": "completed",
+      "returnedRequests": 1,
+      "inputTokens": 2063,
+      "outputTokens": 185,
+      "estimatedUsd": 0.00016818,
+      "promptVersions": [
+        "initialization-2026-10-30-grounded-v10"
+      ],
+      "sourceCommit": "819411766273044a2c8a9d08e897ab3bfa2b992a"
+    },
+    {
+      "stage": "generate",
+      "model": "nvidia/Nemotron-3.5-Super-VL",
+      "thinking": true,
+      "maxTokens": 16384,
+      "executionStatus": "completed",
+      "returnedRequests": 1,
+      "inputTokens": 11581,
+      "outputTokens": 10780,
+      "estimatedUsd": 0.013176299999999998,
+      "promptVersions": [
+        "journey-2026-10-30-grounded-cost-v25"
+      ],
+      "sourceCommit": "819411766273044a2c8a9d08e897ab3bfa2b992a"
+    },
+    {
+      "stage": "revise",
+      "model": "nvidia/Nemotron-3.5-Super-VL",
+      "thinking": true,
+      "maxTokens": 16384,
+      "executionStatus": "completed",
+      "returnedRequests": 2,
+      "inputTokens": 61317,
+      "outputTokens": 13441,
+      "estimatedUsd": 0.030492,
+      "promptVersions": [
+        "journey-revision-2026-10-30-grounded-cost-v6"
+      ],
+      "sourceCommit": "819411766273044a2c8a9d08e897ab3bfa2b992a"
+    },
+    {
+      "stage": "review_progress",
+      "model": "nvidia/Nemotron-3.5-Super-VL",
+      "thinking": false,
+      "maxTokens": 4096,
+      "executionStatus": "completed",
+      "returnedRequests": 1,
+      "inputTokens": 9552,
+      "outputTokens": 457,
+      "estimatedUsd": 0.0032769,
+      "promptVersions": [
+        "progress-review-2026-10-30-grounding-v29"
+      ],
+      "sourceCommit": "819411766273044a2c8a9d08e897ab3bfa2b992a"
+    }
+  ],
+  "costComparison": {
+    "baselineEstimatedUsd": 0.3534155,
+    "candidateEstimatedUsd": 0.047113379999999996,
+    "reduction": 0.866691245856506,
+    "actualSequentialJourney": false,
+    "method": "Returned token usage multiplied by the recorded catalog prices; no cache discount. Prompts, context, tools and routing changed together.",
+    "pricingCheckedAt": "2026-10-30T09:53:58.581Z",
+    "billingVerified": false
+  },
+  "judgments": [
+    {
+      "stage": "generate",
+      "candidateRunId": "6f4242ba-1396-46be-a43d-4ea3de25b3da",
+      "requestHash": "1fad5009f5918db29c9c636d6a0ab6f698755bf720032f542e9c4e465cc253d1",
+      "judgeVersion": "plan-judge-2026-10-30-grounding-v9",
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "status": "completed",
+      "verdict": "pass",
+      "calibrationStatus": "not_calibrated",
+      "dimensions": [
+        {
+          "dimension": "science_safety",
+          "status": "completed",
+          "judgment": {
+            "verdict": "pass",
+            "reason": "The plan proposes a credible balanced eating pattern (adding vegetable/tofu/egg/meat to lunch, eating to comfortable fullness at dinner) that creates an energy deficit without magic foods, spot reduction, or exercise-only promises. It preserves adequate protein, varied plant/fibre, and dietary fats/carbohydrates in a balanced pattern, not demanding a single macro ratio or nutrient counting. The calculator's conditional projections (Hall model) show a moderate fat-free mass loss (~1.8 kg over 16 weeks) alongside fat loss, acknowledging the goal weight is not projected to be reached by the target date (goalReachedAtHorizon: false), which the plan honestly communicates. No crash restrictions, compensatory fasting/exercise, medication advice, or diagnosis are present. Persistent hunger triggers review of satisfaction/burden/assumptions via weekly check-ins, not further staple restriction. The plan qualifies its pattern as a conditional attempt under displayed assumptions, not proven attainment or tissue-change proof. It stays within the application's standard eligibility and calculated limits."
+          }
+        },
+        {
+          "dimension": "real_world_feasibility",
+          "status": "completed",
+          "judgment": {
+            "verdict": "pass",
+            "reason": "The plan uses only foods the user reports as available at the canteen/takeout (rice, noodles, vegetables, eggs, tofu, meat) and retains the existing family dinner pattern, requiring no cooking, weighing, logging, or weekend prep. The two stated obstacles (unwanted vegetable/egg unavailable; family pressure to overeat) are met with alternatives that rely on the same available food categories (switch to meat/egg or keep staple) and a behavioral portion-control tactic that works within the family setting. The walking baseline is kept as the user’s current habit with no added exercise demands. The three-phase, 17-week structure repeats the same core commitments and fallbacks, giving a coherent whole-horizon strategy. No unavailable menus, equipment, or schedule freedoms are prescribed."
+          }
+        },
+        {
+          "dimension": "agency_feedback",
+          "status": "completed",
+          "judgment": {
+            "verdict": "pass",
+            "reason": "The plan respects the user's explicit preferences: no food weighing, photographing, calorie logging, or weekend meal prep; retains the existing twice-weekly 30-minute walking habit as baseline without adding exercise tasks; uses familiar canteen/takeout foods (rice, noodles, vegetables, eggs, tofu, meat) and keeps family dinner normal with comfortable satiety stopping; presents the proposal as a conditional trial with the calculator's goal-gap notice (goalReachedAtHorizon false) and no silent goal/date changes; avoids daily food/exercise diary or chat. The training ceiling (60 min) is treated as a ceiling, not a quota. Fallbacks are feasible within the user's context (choose available protein/veg or keep staple, no exercise compensation). Check-in questions are simple weekly reviews, not daily tracking. All agency/feedback requirements are met."
+          }
+        },
+        {
+          "dimension": "behavior_adaptation",
+          "status": "completed",
+          "judgment": {
+            "verdict": "pass",
+            "reason": "The plan provides a manageable novice starting point: a concrete weekly cue (add one vegetable/tofu/egg/meat portion to familiar canteen/takeout staple; eat family dinner to comfortable fullness) that respects the user's constraints (no weighing, logging, meal prep) and preserves the existing walking habit. Three phases have distinct purposes across the horizon (establish routine, consolidate/review, prepare continuation) without automatic intensification — commitments stay identical. With no prior measurements, the plan does not over‑interpret single points; it includes weekly Monday weigh‑in checkpoints, practical fallbacks for unavailable items and family pressure, and explicit keep/discuss‑change conditions at each phase and weekly batch. The calculator's honest unmet‑goal notice is acknowledged in the summary. All dimension requirements are satisfied."
+          }
+        }
+      ]
+    },
+    {
+      "stage": "revise",
+      "candidateRunId": "1a9307f6-8acf-49d5-9369-b67accd56f7a",
+      "requestHash": "6a25e7e0ef14dce314f6f3dad3b25a4e2cd55effedbe56c7b0972498be19a731",
+      "judgeVersion": "plan-judge-2026-10-30-grounding-v9",
+      "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+      "status": "completed",
+      "verdict": "pass",
+      "calibrationStatus": "not_calibrated",
+      "dimensions": [
+        {
+          "dimension": "science_safety",
+          "status": "completed",
+          "judgment": {
+            "verdict": "pass",
+            "reason": "The plan explains a sustainable energy deficit through feasible eating-pattern changes (vegetable-protein-staple trio and eating order) rather than magic foods or exercise-only promises. It preserves adequate protein (eggs, tofu, meat), varied vegetables, and staple carbohydrates in a balanced pattern without demanding a single macro ratio, supplements, or nutrient counting. The calculator's conditional projections are used honestly: the Hall model projects 76.3 kg at the goal date (goal 76 kg) with goalReachedAtHorizon=false, and the plan explicitly states the calculator predicts difficulty reaching the goal under current assumptions. No crash restriction, compensatory fasting/exercise, medication advice, or diagnosis appears. The prototype support rule is followed: persistent hunger triggers review of alternatives without further staple reduction or added exercise. The plan stays within the standard eligibility population and calculated limits. Food lists and prototype eligibility are not presented as proof of nutritional adequacy or clinical safety. The revised fallback alternatives (choose another ready-made dish or complete the trio at the next meal) respect the user's no-meal-prep constraint."
+          }
+        },
+        {
+          "dimension": "real_world_feasibility",
+          "status": "completed",
+          "judgment": {
+            "verdict": "pass",
+            "reason": "The revised plan respects the user's physiological and environmental constraints: sedentary office work, lunch at canteen/takeout with described variety (rice, noodles, vegetables, eggs, tofu, meat), family dinner preserved, no cooking/prep/tracking, and existing 2×30-min weekly walks maintained. It reduces to a single weekly principle (flexible staple-vegetable-protein trio) with a fallback that assumes alternative ready-made dishes exist at the same venues (plausible given the reported variety) and allows completing the trio at the next meal, without requiring brought food, added exercise, or staple reduction. The whole 17-week horizon is covered with consistent actions and check-ins. The calculator's projection that the goal is not reached by the target date is acknowledged in the final phase's progression logic. Feedback priorities (fewer_actions, food_flexibility) are addressed: actions per week cut from two to one, fallbacks simplified, family dinner and staples kept, no meal prep or logging added. The only minor coherence gap is a missing phase label for weeks 9–12 (Dec 26–Jan 22), but the weekly actions remain defined and feasible. No unavailable resources are prescribed; the strategy is practicable within the reported conditions."
+          }
+        },
+        {
+          "dimension": "agency_feedback",
+          "status": "completed",
+          "judgment": {
+            "verdict": "pass",
+            "reason": "The revised plan materially addresses the feedback by consolidating two dietary principles into one (the staple-vegetable-protein three-piece set), removing the eating-order principle, and simplifying weekly check-ins to a single recall question at the existing Monday weigh-in. It honors all explicit preferences: no food weighing, photographing, calorie logging, or weekend meal prep; retains family dinner and normal staples; keeps the current twice-weekly 30-minute walks as baseline without adding exercise; and presents flexible canteen/takeout alternatives without declaring the proposal accepted. The calculator's honest non-attainment notice is acknowledged. No daily diary or chat is requested. The plan respects the user's willing effort ceiling and timing flexibility."
+          }
+        },
+        {
+          "dimension": "behavior_adaptation",
+          "status": "completed",
+          "judgment": {
+            "verdict": "pass",
+            "reason": "The revised plan provides a clear, manageable starting point (three-piece set at each meal using familiar canteen/takeout/family dinner options) that respects the user’s constraints (no weighing, logging, meal prep, or added exercise). Phases have distinct purposes: establish the routine, review adaptation with flexible ready-made alternatives, consolidate the workable model, and conduct a full review for continuation. Weekly Monday weigh-ins serve as concrete measurement checkpoints. Fallback alternatives are practical and constraint-aware (choose another ready-made dish containing the missing item, or complete the three-piece set at the next meal; no cooking, no added exercise, no staple reduction). Progression conditions (keepWhen/discussChangeWhen) are tied to feasibility and persistent hunger, not calendar passage. The plan acknowledges the calculator’s projected goal gap and triggers discussion of revision or new target date when warranted. No automatic intensification or vague reassurance is present. A minor inconsistency in Phase 1 guidance (mentioning two principles while commitments list one) does not undermine the behavioral progression structure."
+          }
+        }
+      ]
+    }
+  ],
+  "observedFailures": [
+    {
+      "stage": "review_progress",
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "status": "failed",
+      "error": "Nebius returned an incomplete response. Please retry."
+    },
+    {
+      "stage": "generate",
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "status": "failed",
+      "error": "Nebius returned an incomplete response. Please retry."
+    },
+    {
+      "stage": "revise",
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "status": "failed",
+      "error": "Nebius returned an incomplete response. Please retry."
+    }
+  ],
+  "limits": [
+    "Defined synthetic cases are not participants or evidence of adoption/health outcomes.",
+    "Judge verdicts and reasons are machine assessments, not clinical expertise or calibrated human truth.",
+    "The aggregate comparison is not an end-to-end cost average, equal-quality proof or model-only ranking.",
+    "New UI/deployment changes do not constitute fresh model-quality evaluation."
+  ]
+}

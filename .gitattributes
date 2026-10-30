@@ -1,0 +1,10 @@
+# Public source exports contain the app and technical evidence, not private authoring/operations.
+AGENTS.md export-ignore
+CLAUDE.md export-ignore
+submission export-ignore
+submission/** export-ignore
+docs/*.md export-ignore
+docs/*.html export-ignore
+docs/evidence/* export-ignore
+docs/evidence/evaluation.json -export-ignore
+scripts/review-release-source.mjs export-ignore

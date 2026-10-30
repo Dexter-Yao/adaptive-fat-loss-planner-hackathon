@@ -1,0 +1,12 @@
+.git
+.env
+.env.*
+!.env.example
+.runtime
+.next
+node_modules
+public/local-review
+playwright-report
+test-results
+*.tsbuildinfo
+.DS_Store
